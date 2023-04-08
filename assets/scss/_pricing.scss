@@ -1,0 +1,101 @@
+@use 'var';
+
+.pricing {
+    padding-block: 80px;
+
+    &__container {}
+
+    &__heading {
+        text-align: center;
+
+        p {
+            margin-inline: auto;
+        }
+    }
+
+    &__content {
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-around;
+
+        &__plan {
+            margin-inline: 5px;
+            width: 330px;
+            height: 760px;
+            padding: 80px 30px 50px;
+            background: #FFFFFF;
+            border: 2px solid #DDDDDD;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            &__header {
+                display: flex;
+                flex-direction: column;
+                gap: 30px 0;
+                align-items: center;
+            }
+
+            &__image {
+                img {
+                    max-width: 145px;
+                }
+            }
+
+            &__title {
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 167%;
+                color: var.$color-dark;
+            }
+
+            &__list {
+                display: flex;
+                flex-direction: column;
+                gap: 10px 0;
+            }
+
+            &__item {
+                margin-left: 5px;
+                display: flex;
+                gap: 0 20px;
+                align-items: center;
+
+                i {
+                    font-size: 12px;
+                    color: var.$color-green;
+                }
+            }
+
+            &__bottom {
+                display: flex;
+                flex-direction: column;
+                gap: 20px 0;
+                align-items: center;
+            }
+
+            &__price {
+                font-weight: 500;
+                font-size: 25px;
+                line-height: 120%;
+                color: var.$color-dark;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 752px) {
+    .pricing {
+        &__content {
+            flex-direction: column;
+            gap: 60px 0;
+
+            &__plan {
+                margin-inline: auto;
+                max-width: 100%;
+            }
+        }
+    }
+}

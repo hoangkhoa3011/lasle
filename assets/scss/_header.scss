@@ -1,0 +1,94 @@
+@use 'var';
+
+.header {
+    padding-top: 46px;
+    background-color: #FFFFFF;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    &__navbar {
+        display: flex;
+        gap: 0 40px;
+        align-items: center;
+
+        &__item {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 30px;
+            
+            &__link {
+                color: var.$color-text;
+                position: relative;
+                
+                &:after {
+                    content: "";
+                    position: absolute;
+                    bottom: -8px;
+                    left: auto;
+                    right: 0;
+                    width: 0;
+                    height: 3px;
+                    background-color: var.$color-primary;
+                    transition: all .2s linear;
+                }
+
+                &:hover {
+                    color: var.$color-primary;
+
+                    &:after {
+                        width: 100%;
+                        left: 0;
+                        right: auto;
+                    }
+                }
+            }
+        } 
+    }
+
+    &__sign {
+        display: flex;
+        gap: 0 30px;
+        align-items: center;
+
+        &__in {
+            font-weight: 500;
+            font-size: 16px;
+            padding-block: 5px;
+            color: var.$color-dark;
+            
+            &:hover {
+                color: var.$color-primary;
+            }
+        }
+
+        &__up {
+            width: 150px;
+
+            .btn__blur {
+                width: 100px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 876px) {
+    .header {
+        &__navbar {
+            display: none;
+        }
+
+        &__sign {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .header {
+        padding-top: 30px;
+    }
+}

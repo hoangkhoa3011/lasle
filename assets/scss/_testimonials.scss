@@ -1,0 +1,142 @@
+@use 'var';
+
+.testimonials {
+    padding-block: 84px 0;
+
+    &__container {}
+
+    &__heading {
+        text-align: center;
+
+        h2 {
+            max-width: 448px;
+            margin-inline: auto;
+        }
+
+        p {
+            margin-inline: auto;
+        }
+    }
+
+    &__content {
+        margin-top: 60px;
+        display: flex;
+        gap: 0 50px;
+        overflow-x: scroll;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    &__item {
+        min-width: 400px;
+        min-height: 230px;
+        padding: 30px;
+        background: #FFFFFF;
+        border: 2px solid #DDDDDD;
+        border-radius: 10px;
+        transition: .3s;
+
+        &__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &__user {
+            display: flex;
+            gap: 0 20px;
+            align-items: center;
+
+            &__avatar {
+                img {
+                    max-width: 50px;
+                }
+            }
+
+            &__profile {
+                h6 {
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 167%;
+                    color: var.$color-dark;
+                }
+
+                p {
+                    margin-top: -9px;
+                    margin-left: 1px;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 214%;
+                    color: var.$color-text;
+                }
+            }
+        }
+
+        &__voted {
+            display: flex;
+            gap: 0 10px;
+            align-items: center;
+        }
+
+        &__text {
+            margin-top: 20px;
+            max-width: none;
+        }
+
+        &--active {
+            border-color: var.$color-primary;
+        }
+    }
+
+    &__bar {
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__trans {
+            display: flex;
+            gap: 0 15px;
+            align-items: center;
+            position: relative;
+
+            &__small {
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                background-color: #DDE0E4;
+            }
+
+            &__large {
+                width: 45px;
+                height: 15px;
+                border-radius: 15px;
+                background-color: var.$color-primary;
+                position: absolute;
+                z-index: 1;
+                left: 0;
+                transition: .3s;
+            }
+        }
+
+        &__btn {
+            display: flex;
+            gap: 0 20px;
+            align-items: center;
+
+            i {
+                font-size: 23px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .testimonials {
+        &__item {
+            min-width: 100%;
+        }
+    }
+}

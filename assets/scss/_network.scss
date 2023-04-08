@@ -1,0 +1,28 @@
+@use 'var';
+
+.network {
+    padding-block: 70px;
+
+    &__container {
+
+    }
+
+    &__heading {
+        text-align: center;
+
+        h2 {
+            max-width: 382px;
+            margin-inline: auto;
+        }
+
+        p {
+            margin-inline: auto;
+        }
+    }
+
+    &__content {
+        margin-top: 156px;
+        margin-inline: auto;
+        max-width: 1060px;
+    }
+}
